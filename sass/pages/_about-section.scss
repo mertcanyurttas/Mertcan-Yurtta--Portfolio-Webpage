@@ -1,0 +1,172 @@
+@use "../fonts/fonts";
+@import "../mixins/mixins";
+
+.about-section {
+    min-height: 100vh;
+    position: relative;
+    isolation: isolate;
+    background: #222;
+    overflow: hidden;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    .logo {
+        max-width: 18.75rem;
+        margin: auto;
+        margin-top: 1.88rem;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .about {
+        margin-top: 1.88rem;
+        color: #f3f3f3;
+
+        h2 {
+            /* Work Sans/M-Bold-18 */
+            font-family: "Work Sans/Bold";
+            font-size: 1.125rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%; /* 1.125rem */
+        }
+
+        p {
+            color: #f3f3f3;
+            margin-top: 1.25rem;
+
+            /* Work Sans/M-Regular-16 */
+            font-family: "Work Sans/Regular";
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 110%; /* 1.1rem */
+            letter-spacing: 0.01rem;
+        }
+    }
+
+    .lines {
+        margin-top: 1.88rem;
+        display: flex;
+        padding: 0rem 0.625rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+        overflow: hidden;
+
+        .first {
+            display: block;
+            max-width: 6.25rem;
+            margin: auto;
+        }
+        .second {
+            display: block;
+            max-width: 18.75rem;
+            margin: auto;
+        }
+        .third {
+            display: block;
+            max-width: 18.75rem;
+            margin: auto;
+        }
+    }
+
+    .skills {
+        margin: 1.88rem auto 4.13rem;
+        color: #f3f3f3;
+        text-align: center;
+        display: flex;
+        max-width: 28.125rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.875rem;
+        align-self: stretch;
+
+        h2 {
+            /* Work Sans/M-Bold-18 */
+            font-family: "Work Sans/Bold";
+            font-size: 1.125rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%; /* 1.125rem */
+        }
+
+        .row1,
+        .row2,
+        .row3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: stretch;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                flex: 1 0 0;
+
+                /* Work Sans/M-Medium-16 */
+                font-family: "Work Sans/Medium";
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 100%; /* 1rem */
+
+                img {
+                    width: 2.5rem;
+                }
+            }
+        }
+
+        .row4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: stretch;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex: 1 0 0;
+
+            /* Work Sans/M-Medium-16 */
+            font-family: "Work Sans/Medium";
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%; /* 1rem */
+
+            img {
+                width: 2.5rem;
+            }
+        }
+    }
+}
+
+.about-section::before {
+    content: "";
+    background-color: black;
+    z-index: -1;
+    inset: 0;
+    position: absolute;
+}
+
+.about-section::after {
+    content: "";
+    opacity: 0.15;
+    background-image: url(../images/background-image.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: luminosity;
+    z-index: -1;
+    inset: 0;
+    position: absolute;
+}

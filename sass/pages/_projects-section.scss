@@ -1,0 +1,171 @@
+@use "../fonts/fonts";
+@import "../mixins/mixins";
+
+.projects-section {
+    min-height: 100vh;
+    position: relative;
+    isolation: isolate;
+    background: #222;
+    overflow: hidden;
+    padding-left: 2.8rem;
+    padding-right: 2.8rem;
+
+    .projects {
+        display: flex;
+        max-width: 21.25rem;
+        flex-direction: column;
+        align-items: center;
+        margin: 3.75rem auto 7rem;
+
+        h2 {
+            color: #f3f3f3;
+            text-align: center;
+
+            /* Work Sans/M-Bold-18 */
+            font-family: "Work Sans/Bold";
+            font-size: 1.125rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%; /* 1.125rem */
+        }
+
+        .project {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-self: stretch;
+            background: #eeb0c2;
+            box-shadow: 0px 25px 10px 0px rgba(0, 0, 0, 0.6);
+            margin-top: 10rem;
+
+            .img {
+                display: flex;
+                width: 80%;
+                height: 5rem;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 9.375rem;
+                    position: absolute;
+                    margin: auto;
+                    top: -6rem;
+                    object-fit: cover;
+                }
+            }
+
+            .content {
+                display: flex;
+                padding: 0rem 1.875rem 1.25rem 1.875rem;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 1rem;
+                align-self: stretch;
+
+                p {
+                    color: #131313;
+
+                    /* Work Sans/M-Regular-16 */
+                    font-family: "Work Sans/Regular";
+                    font-size: 1rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 110%; /* 1.1rem */
+                    letter-spacing: 0.01rem;
+                    word-break: break-word;
+                }
+
+                a {
+                    display: flex;
+                    width: 7.5rem;
+                    height: 1.75rem;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 0.1875rem;
+                    background: #c70039;
+                    color: #f3f3f3;
+                    text-align: center;
+
+                    /* Work Sans/M-Medium-16 */
+                    font-family: "Work Sans/Medium";
+                    font-size: 1rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 100%; /* 1rem */
+                }
+            }
+        }
+    }
+
+    .vector1 {
+        position: absolute;
+        width: 15.625rem;
+        height: 15.625rem;
+        fill: #a90030;
+        filter: blur(10px);
+        margin-top: -79rem;
+        margin-left: -8rem;
+        z-index: -10;
+        transform: rotate(-180deg);
+
+        img {
+            display: block;
+            width: 100%;
+            margin-top: -1.18rem;
+            margin-left: -1.88rem;
+        }
+    }
+    .vector2 {
+        position: absolute;
+        width: 15.625rem;
+        height: 15.625rem;
+        fill: #a90030;
+        filter: blur(10px);
+        margin-top: -70rem;
+        margin-left: 2rem;
+        z-index: -10;
+
+        img {
+            display: block;
+            width: 100%;
+            margin-top: -1.18rem;
+            margin-left: -1.88rem;
+        }
+    }
+    .vector3 {
+        position: absolute;
+        width: 15.625rem;
+        height: 15.625rem;
+        fill: #a90030;
+        filter: blur(10px);
+        margin-top: -16rem;
+        margin-left: 40%;
+        z-index: -10;
+        transform: rotate(-180deg);
+
+        img {
+            display: block;
+            width: 100%;
+            margin-top: -1.18rem;
+            margin-left: -1.88rem;
+        }
+    }
+}
+
+.projects-section::after {
+    content: "";
+    opacity: 0.15;
+    background-image: url(../images/background-image.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: luminosity;
+    z-index: -1;
+    inset: 0;
+    position: absolute;
+}
